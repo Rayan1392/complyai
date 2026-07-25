@@ -1,0 +1,8 @@
+node_modules
+.output
+.tanstack
+.nitro
+.git
+deploy/*.tar
+deploy/*.tar.gz
+npm-debug.log*
