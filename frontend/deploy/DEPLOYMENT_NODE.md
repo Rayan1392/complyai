@@ -5,7 +5,7 @@
 - دامنه: `complyai.avidaweb.com`
 - سرور: `185.126.203.173`
 - پورت SSH: `22033`
-- مسیر پروژه: `/opt/app/complyai/`
+- مسیر پروژه: `/opt/apps/complyai/`
 - شاخه انتشار: `develop`
 
 ## 1. اتصال به سرور و نصب پیش‌نیازها
@@ -72,8 +72,8 @@ curl -I http://127.0.0.1:3000/
 یک کاربر محدود برای اجرای برنامه بسازید:
 
 ```bash
-sudo useradd --system --home /opt/app/complyai --shell /usr/sbin/nologin complyai || true
-sudo chown -R complyai:complyai /opt/app/complyai
+sudo useradd --system --home /opt/apps/complyai --shell /usr/sbin/nologin complyai || true
+sudo chown -R complyai:complyai /opt/apps/complyai
 ```
 
 فایل `/etc/systemd/system/complyai-frontend.service` را بسازید:
@@ -87,7 +87,7 @@ After=network.target
 Type=simple
 User=complyai
 Group=complyai
-WorkingDirectory=/opt/app/complyai/frontend
+WorkingDirectory=/opt/apps/complyai/frontend
 Environment=NODE_ENV=production
 Environment=NITRO_HOST=127.0.0.1
 Environment=NITRO_PORT=3000
