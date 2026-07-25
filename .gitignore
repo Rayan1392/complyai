@@ -1,0 +1,6 @@
+# Microsoft Office temporary files
+docs/~$*
+docs/~WRL*.tmp
+
+# Local codebase index
+.codebase-memory/
